@@ -10,6 +10,7 @@ import com.artemchep.keyguard.common.io.map
 import com.artemchep.keyguard.common.io.toIO
 import com.artemchep.keyguard.platform.recordException
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 
 interface GetPurchased : () -> Flow<Boolean>
 
@@ -17,7 +18,8 @@ fun <T> IO<T>.premium(
     getPurchased: () -> Flow<Boolean>,
     predicate: IO<Boolean> = io(true),
 ): IO<T> = ioEffect {
-    val isPremium = getPurchased()
+    val isPremium = flowOf(true)
+//    val isPremium = getPurchased()
         .toIO()
         .handleErrorTap { e ->
             val newException = RuntimeException(

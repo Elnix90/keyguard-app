@@ -2,6 +2,6 @@
 
 # Ignore production keys from being
 # include into the source system.
-keyguard-release*
+#keyguard-release*
 # Ignore google-services.json
-google-services.json
+#google-services.json

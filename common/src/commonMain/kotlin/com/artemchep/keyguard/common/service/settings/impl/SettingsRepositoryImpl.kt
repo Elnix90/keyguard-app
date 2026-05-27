@@ -184,12 +184,14 @@ class SettingsRepositoryImpl(
 
     private val debugPremiumPref =
         store.getBoolean(KEY_DEBUG_PREMIUM, false)
+//    store.getBoolean("randomvaluetoavoiditbeeingset", true)
 
     private val debugScreenDelayPref =
         store.getBoolean(KEY_DEBUG_SCREEN_DELAY, false)
 
     private val cachePremiumPref =
         store.getBoolean(KEY_CACHE_PREMIUM, false)
+//        store.getBoolean("randomvaluetoavoiditbeeingset2", true)
 
     private val cacheHiddenSendPref =
         store.getBoolean(KEY_CACHE_HIDDEN_SEND, true)

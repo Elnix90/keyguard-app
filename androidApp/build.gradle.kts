@@ -84,9 +84,14 @@ android {
         }
         maybeCreate("release").apply {
             keyAlias = releaseSigningProps.getProperty("key_alias")
-            keyPassword = releaseSigningProps.getProperty("password_store")
+
+            storePassword = "password"
+            keyAlias = "keyguard-key"
+            keyPassword = "password"
             storeFile = file("keyguard-release.keystore")
-            storePassword = releaseSigningProps.getProperty("password_key")
+
+//            keyPassword = releaseSigningProps.getProperty("password_store")
+//            storePassword = releaseSigningProps.getProperty("password_key")
         }
     }
 
